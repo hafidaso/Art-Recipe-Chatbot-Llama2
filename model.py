@@ -6,38 +6,6 @@ from langchain.llms import CTransformers
 from langchain.chains import RetrievalQA
 import chainlit as cl
 
-import requests
-
-def google_search(query, api_key, cse_id):
-    # Endpoint for Google Custom Search
-    endpoint = "https://www.googleapis.com/customsearch/v1"
-
-    # Parameters for the request
-    params = {
-        'q': query,  # Search query
-        'key': api_key,  # Your API Key
-        'cx': cse_id  # Your CSE ID
-    }
-
-    # Make an HTTP GET request
-    response = requests.get(endpoint, params=params)
-
-    # Check if the request was successful
-    if response.status_code == 200:
-        return response.json()
-    else:
-        print(f"Error with status code: {response.status_code}")
-        return None
-
-# Your credentials
-api_key = "AIzaSyC2pYl4JIFPvw9wHu9d5haqoWNynNRbIZ8"
-cse_id = "55db349b300214f88"
-
-# Test the function
-results = google_search("OpenAI", api_key, cse_id)
-if results and 'items' in results:
-    for item in results['items']:
-        print(item['title'], item['link'])
 
 
 DB_FAISS_PATH = 'vectorstore/db_faiss'
