@@ -5,7 +5,7 @@ This is a recipe bot built using Llama2 and Sentence Transformers. The bot is po
 Welcome to the Recipe Chatbot project! Leveraging the powerful capabilities of the Llama and Chainlit libraries, this chatbot aims to assist users on their culinary journey. Whether you're a novice cook or a seasoned chef, our bot is here to provide recipes, tips, and insights.
 
 ![Chatbot Demo](https://github.com/hafidaso/Art-Recipe-Chatbot-Llama2/blob/main/Screenshot%202023-09-09%20at%2022.14.28.png)  
-*Insert a GIF or image of the chatbot in action.*
+
 
 ## Table of Contents
 
